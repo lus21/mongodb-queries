@@ -1,0 +1,25 @@
+{
+  "name": "internship-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "express-validator": "3",
+    "lodash": "^4.17.4",
+    "mongoose": "^5.0.0",
+    "pug": "^2.0.0-rc.4"
+  },
+  "devDependencies": {
+    "dotenv": "^4.0.0"
+  }
+}

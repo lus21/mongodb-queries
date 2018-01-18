@@ -2,7 +2,9 @@ const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
 const dotdev =  require('dotenv');
-
+const MongoClient = require('mongodb').MongoClient;
+const url = "mongodb://localhost:27017/";
+const ObjectID = require('mongodb').ObjectID;
 
 const app = express();
 dotdev.config();
@@ -12,11 +14,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 
-// initalizeRoutes(app);
-
-const MongoClient = require('mongodb').MongoClient;
-const url = "mongodb://localhost:27017/";
-const ObjectID = require('mongodb').ObjectID;
 
 //mongodb scripts /start
 MongoClient.connect(url, function(err, db) {
